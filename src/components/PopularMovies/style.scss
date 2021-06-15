@@ -1,0 +1,142 @@
+@import "../../mixins.scss";
+.container-movie {
+  all:unset;
+  cursor: pointer;
+  height: 290px;
+  width:198px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: $white;
+  margin: 10px;
+  background-position: center;
+  background-size: cover;
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 290px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 45%);
+    padding: 0 16px 16px 16px;
+
+    .box {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+
+    .mainInfo {
+      .title {
+        font-size:12px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .genres {
+        display: flex;
+        flex-wrap: wrap;
+
+        .genre {
+          font-size: 10px;
+          margin: 4px 8px 0 0;
+        }
+      }
+    }
+
+    .infoHoverWrapper {
+      display: flex;
+      justify-content:space-between;
+      transform: scale(0.9);
+      opacity: 0;
+
+      .infoHover {
+        font-size:12px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @include tablet {
+    height: 242px;
+    width:164px;
+    margin: 5px;
+  }
+}
+
+.container-movie:hover{
+
+  .info {
+    height: 290px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.5) 43.25%, rgba(0, 0, 0, 1));
+
+    .box {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 500ms linear;
+      transform: scale(1);
+      opacity: 1;
+
+      .progress {
+        color: rgba(216, 216, 216, .15);
+        min-height: 80px;
+        min-width: 80px;
+      }
+
+      .progressBg {
+        position: absolute;
+        color: #FFE000;
+        min-height: 80px;
+        min-width: 80px;
+      }
+
+      @include tablet {
+        .progress{
+          min-height: 60px;
+          min-width: 60px;
+        }
+      }
+
+      @include tablet {
+        .progressBg{
+          min-height: 60px;
+          min-width: 60px;
+        }
+      }
+
+      .boxWrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    @include tablet {
+      .box{
+        margin-bottom:40px;
+      }
+    }
+
+    .mainInfo {
+      transform: translateY(-20px);
+      transition: transform 500ms;
+    }
+
+    .infoHoverWrapper {
+      transition: 500ms linear;
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}

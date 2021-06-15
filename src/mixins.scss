@@ -1,0 +1,29 @@
+$blue: #2980b9;
+$lightBlue: #3498db;
+$white: #ecf0f1;
+$gray: #7f8c8d;
+$teal: #004C66;
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Open+Sans&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+@mixin mobile {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 770px) {
+    @content;
+  }
+}

@@ -1,0 +1,85 @@
+@import "../../mixins.scss";
+.header {
+    height: auto;
+    box-sizing: border-box;
+    background-image: url("../../assets/img/krists-luhaers-543526-unsplash.png");
+    background-position: 0% 25%;
+    background-size: cover;
+
+
+    .container {
+        padding: 50px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+        background: rgba(103, 119, 124, .1);
+        background: linear-gradient(180deg, rgba(0,24,33,0.5) 0%, rgba(0,24,33,1) 100%);
+
+        .container-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top:100px;
+            .title {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                span{
+                    font-family: 'Baloo Tammudu 2', cursive;
+                    color: $white;
+                    font-size: 80px;
+                    line-height:0;
+                    letter-spacing: 10px;
+
+                    @include mobile {
+                        line-height:1;
+                    }
+        
+                    @include tablet {
+                        line-height:1;
+                    }
+                }
+            }
+    
+            .subtitle{
+                text-transform: uppercase;
+                font-size: 15px;
+                line-height:5;
+                letter-spacing: 0;
+                color: $white;
+    
+    
+                @include tablet {
+                    line-height:2;
+                    letter-spacing: 5px;
+                }
+            }
+        }
+
+        .paper {
+            width: 26rem;
+            margin-top:60px;
+            margin-bottom:60px;
+            border-radius: 6px;
+            border: none;
+            background-color: $white;
+
+            .input {
+                width: 22rem;
+                padding-left:10px;
+
+                @include tablet {
+                    width: 14rem;
+                }
+            }
+
+            @include tablet {
+                max-width: 17rem;
+            }
+        }
+    }
+}
+
