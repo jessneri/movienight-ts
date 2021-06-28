@@ -15,3 +15,4 @@ This project was created using **ReactJs, TypeScript, Axios, Sass and Material-U
 
 ![projeto movie night gif 2](https://media.giphy.com/media/iOYgmFUfcP2sFKqaRm/giphy.gif)
 
+###### This project used the API from The Movie DB.
