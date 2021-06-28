@@ -6,3 +6,4 @@ This project was created using ReactJs, TypeScript, Axios, Sass and Material-UI 
 ![projeto movie night](https://i.imgur.com/VWz8PSY.png?1)
 
 
+![Imgur](https://imgur.com/4k02pDB)
