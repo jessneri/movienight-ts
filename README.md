@@ -4,5 +4,3 @@ Movie Night is a web app that brings you information about movies and series. It
 This project was created using ReactJs, TypeScript, Axios, Sass and Material-UI library.
 
 ![projeto movie night](https://i.imgur.com/VWz8PSY.png?1)
-
-![projeto movie night](https://i.imgur.com/4k02pDB.mp4)
