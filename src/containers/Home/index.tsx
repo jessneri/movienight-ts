@@ -14,7 +14,7 @@ export function Home() {
     <div className="container">
       <div className="home">
         <div className="movies">
-          {movies.map(movie => (
+          {movies.map((movie) => (
             <PopularMovies key={movie.id} movie={movie} />
           ))}
         </div>

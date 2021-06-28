@@ -1,6 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
+import dotenv from "dotenv";
 import { useCallback, useEffect, useState } from "react";
+
+dotenv.config();
 
 interface Movie {
   results: Product[];
@@ -53,7 +56,7 @@ export function useApi() {
           page: currentPage,
         },
       })
-      .then(response => {
+      .then((response) => {
         const res = response.data;
 
         setMovies(res.results);
@@ -63,7 +66,7 @@ export function useApi() {
 
   function handleChange(_event: unknown, newPage: number) {
     setCurrentPage(newPage);
-    apiFetch().catch(err => console.log(err));
+    apiFetch().catch((err) => console.log(err));
     window.scrollTo(0, 0);
   }
 
@@ -82,7 +85,7 @@ export function useApi() {
             page: currentPage,
           },
         })
-        .then(response => {
+        .then((response) => {
           const newSearch = response.data;
 
           setMovies(newSearch.results);
@@ -121,7 +124,7 @@ export function useApi() {
 
             setGenreMovie(moviesGenre.genres);
             setGenreTv(tvGenre.genres);
-          }),
+          })
         );
     } catch (err) {
       console.log(err);
@@ -129,8 +132,8 @@ export function useApi() {
   }
 
   useEffect(() => {
-    apiFetch().catch(err => console.log(err));
-    apiGenre().catch(err => console.log(err));
+    apiFetch().catch((err) => console.log(err));
+    apiGenre().catch((err) => console.log(err));
     window.scrollTo(0, 0);
   }, [currentPage, !query]);
 
@@ -138,5 +141,16 @@ export function useApi() {
     apiSearch();
   }, [apiSearch, query]);
 
-  return { api, apiKey, movies, currentPage, totalPages, handleChange, handleSearch, query, genreTv, genreMovie };
+  return {
+    api,
+    apiKey,
+    movies,
+    currentPage,
+    totalPages,
+    handleChange,
+    handleSearch,
+    query,
+    genreTv,
+    genreMovie,
+  };
 }

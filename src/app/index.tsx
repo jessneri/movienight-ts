@@ -7,9 +7,9 @@ export function App() {
   return (
     <>
       <Header />
-        <React.Suspense fallback={null}>
-          <Routes />
-        </React.Suspense>
+      <React.Suspense fallback={null}>
+        <Routes />
+      </React.Suspense>
       <Footer />
     </>
   );
