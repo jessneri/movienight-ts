@@ -95,7 +95,7 @@ export function MovieDetails() {
   const history = useHistory();
 
   function handleClick() {
-    history.push("/home");
+    history.push("movienight-ts/home");
   }
 
   return (

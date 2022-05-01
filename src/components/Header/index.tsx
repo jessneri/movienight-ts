@@ -15,7 +15,7 @@ export function Header() {
     <header className="header">
       <div className="container">
         <div className="container-title">
-            <Link to="/" className="title">
+            <Link to="movienight-ts/" className="title">
             <span>movie night</span>
             </Link>
             <span className="subtitle">Informações dos melhores filmes e séries</span>
