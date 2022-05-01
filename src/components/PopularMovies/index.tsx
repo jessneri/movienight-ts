@@ -1,5 +1,4 @@
 import { Box, CircularProgress } from "@material-ui/core";
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStores } from "../../stores";
 import "./style.scss";
