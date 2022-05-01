@@ -66,7 +66,7 @@ function PopularMovies({ movie }: Movie) {
 
   return (
     <Link
-      to={`movienight-ts/${movie.media_type}/${movie.id}`}
+      to={`/${movie.media_type}/${movie.id}`}
       className="container-movie"
       style={{
         backgroundImage: `url(${

@@ -13,9 +13,9 @@ const MovieDetails = React.lazy(async () =>
 export function Routes() {
   return (
     <Switch>
-      <Route exact path="movienight-ts/" render={() => <Redirect to="/home" />} />
-      <Route path="movienight-ts/home" component={Home} />
-      <Route exact path="movienight-ts/:media/:id" component={MovieDetails} />
+      <Route exact path="/" render={() => <Redirect to="/home" />} />
+      <Route path="/home" component={Home} />
+      <Route exact path="/:media/:id" component={MovieDetails} />
     </Switch>
   );
 }
