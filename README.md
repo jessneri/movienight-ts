@@ -1,5 +1,7 @@
 # Movie Night 🎬
 
+[SITE](https://jessneri-movienight-ts.netlify.app/home)
+
 Movie Night is a web app that brings you information about movies and series. It allows you to search for a movie or serie and view the details about it. 
 This project was created using **ReactJs, TypeScript, Axios, Sass and Material-UI library**.
 
